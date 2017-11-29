@@ -19,17 +19,17 @@ secrets/postgres.env:
 	@echo "Generating postgres password in $@"
 	@echo "POSTGRES_PASSWORD=$(shell openssl rand -hex 32)" > $@
 
-secrets/oauth.env:
-	@echo "Need oauth.env file in secrets with GitHub parameters"
-	@exit 1
-
-secrets/jupyterhub.crt:
-	@echo "Need an SSL certificate in secrets/jupyterhub.crt"
-	@exit 1
-
-secrets/jupyterhub.key:
-	@echo "Need an SSL key in secrets/jupyterhub.key"
-	@exit 1
+# secrets/oauth.env:
+# 	@echo "Need oauth.env file in secrets with GitHub parameters"
+# 	@exit 1
+#
+# secrets/jupyterhub.crt:
+# 	@echo "Need an SSL certificate in secrets/jupyterhub.crt"
+# 	@exit 1
+#
+# secrets/jupyterhub.key:
+# 	@echo "Need an SSL key in secrets/jupyterhub.key"
+# 	@exit 1
 
 userlist:
 	@echo "Add usernames, one per line, to ./userlist, such as:"
